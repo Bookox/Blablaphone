@@ -1,0 +1,5 @@
+  Root User: adminJh4uVjB
+  Root Password: W_AlV7VnGcAd
+URL: https://blablaphone-myappsjordys.rhcloud.com/phpmyadmin
+
+Git URL ssh://5522b83ee0b8cd80ee000001@blablaphone-myappsjordys.rhcloud.com/~/git/blablaphone.git/
