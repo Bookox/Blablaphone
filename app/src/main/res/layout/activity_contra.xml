@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.jorwys.project.blablaphone.contra"
+    android:background="@color/PrimaryColor">
+
+   <include
+       layout="@layout/toolbar"
+       android:id="@+id/tbcontra"
+       />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:typeface="normal"
+        android:textSize="20sp"
+        android:id="@+id/mcorreo"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="30dp"
+        android:hint="Correo electronico"
+        android:background="@color/AccentColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Recuperar Contraseña"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/mcorreo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:textColor="@color/AccentColor"
+        android:textStyle="bold"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lo contactaremos por email para la recuperacion de su contraseña"
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/AccentColor"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Enviar"
+        android:id="@+id/menv"
+        android:layout_below="@+id/mcorreo"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:background="@color/AccentColor"
+        android:textColor="@color/PrimaryColor"/>
+
+</RelativeLayout>

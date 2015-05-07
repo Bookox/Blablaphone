@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jorwys.project.blablaphone" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icono"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".login"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".registro"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:parentActivityName=".login"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jorwys.project.blablaphone.login" />
+        </activity>
+        <activity
+            android:name=".Perfil"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_perfil"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".contra"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_contra" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jorwys.project.blablaphone.login"
+                />
+        </activity>
+    </application>
+
+</manifest>

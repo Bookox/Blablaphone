@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Blablaphone</string>
+
+    <string name="in">Log in</string>
+    <string name="correo">Correo</string>
+    <string name="cotra">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registro">Registrarse</string>
+    <string name="title_activity_registro">Registrate</string>
+    <string name="title_activity_perfil">Perfil</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_contra">Olvido su contraseña?</string>
+</resources>

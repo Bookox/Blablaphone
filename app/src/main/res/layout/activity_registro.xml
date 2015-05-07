@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jorwys.project.blablaphone.registro"
+    android:background="@color/PrimaryColor">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/tb"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/editTextNombre"
+        android:singleLine="true"
+        android:hint="Nombre"
+        android:textSize="16sp"
+        android:background="@color/AccentColor"
+        android:layout_below="@+id/tb"
+        android:layout_marginTop="80dp"
+        android:layout_toLeftOf="@+id/editText3"
+        android:maxLength="10"
+
+        android:paddingLeft="20dp"
+        android:inputType="textCapSentences" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/editText3"
+        android:singleLine="true"
+        android:hint="Apellido"
+        android:textAlignment="center"
+        android:background="@color/AccentColor"
+        android:layout_alignTop="@+id/editTextNombre"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="1dp"
+        android:maxLength="15"
+        android:textSize="16sp"
+        android:paddingLeft="20dp"
+        android:inputType="textCapSentences" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/editText4"
+        android:singleLine="true"
+        android:hint="Email"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:background="@color/AccentColor"
+        android:maxLength="30"
+        android:layout_below="@+id/editTextNombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="20dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/editText5"
+        android:singleLine="true"
+        android:hint="País"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:background="@color/AccentColor"
+        android:maxLength="20"
+        android:layout_below="@+id/editText4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="20dp"
+        android:inputType="textCapSentences" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/editText6"
+        android:singleLine="true"
+        android:hint="Contraseña"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:background="@color/AccentColor"
+        android:maxLength="10"
+        android:layout_below="@+id/editText5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="20dp"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/editText7"
+        android:singleLine="true"
+        android:hint="Número de teléfono"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:background="@color/AccentColor"
+        android:maxLength="30"
+        android:layout_below="@+id/editText6"
+        android:layout_marginTop="1dp"
+        android:autoText="false"
+        android:paddingLeft="20dp"
+        android:inputType="phone" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Registrar"
+        android:id="@+id/button3"
+        android:layout_below="@+id/editText7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        android:background="#ffffffff"
+        android:textColor="@color/PrimaryColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="¡LOREM IPSUM!"
+        android:id="@+id/textView"
+        android:textColor="@color/AccentColor"
+        android:layout_below="@+id/tb"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lorem ipsum dolor asimet et supra"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/AccentColor"
+        android:textStyle="italic" />
+
+    <ImageButton
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/imageButton"
+        android:layout_alignTop="@+id/editText6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/eye"
+        android:scaleType="centerInside"
+        android:background="#ffffffff" />
+</RelativeLayout>

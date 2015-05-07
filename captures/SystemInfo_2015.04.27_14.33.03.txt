@@ -1,0 +1,67 @@
+TASK com.jorwys.project.blablaphone id=54
+  ACTIVITY com.jorwys.project.blablaphone/.Perfil 1cfd5cef pid=6242
+    Local FragmentActivity 138dda57 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+    FragmentManager misc state:
+      mActivity=com.jorwys.project.blablaphone.Perfil@138dda57
+      mContainer=android.support.v4.app.FragmentActivity$2@236a944
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{770fa2d V.E..... ... 0,0-720,1280}
+        android.widget.LinearLayout{3226b62 V.E..... ... 0,0-720,1184}
+          android.view.ViewStub{22bc4f3 G.E..... ... 0,0-0,0 #1020373}
+          android.widget.FrameLayout{99715b0 V.E..... ... 0,50-720,1184}
+            android.support.v7.internal.widget.FitWindowsLinearLayout{14100c29 V.E..... ... 0,0-720,1134 #7f09002c app:id/action_bar_root}
+              android.support.v7.internal.widget.ViewStubCompat{3f3fdbae G.E..... ... 0,0-0,0 #7f09002d app:id/action_mode_bar_stub}
+              android.support.v7.internal.widget.NativeActionModeAwareLayout{39b3bd4f V.E..... ... 0,0-720,1134 #1020002 android:id/content}
+                android.widget.RelativeLayout{f4fdcdc V.E..... ... 0,0-720,1134}
+                  android.widget.LinearLayout{87441e5 V.E..... ... 0,0-720,452 #7f09004b app:id/otrotb}
+                    de.hdodenhof.circleimageview.CircleImageView{21b204ba V.ED..C. ... 275,112-445,282 #7f09004c app:id/perfil}
+                    android.widget.TextView{3818df6b V.ED.... ... 197,322-523,381 #7f09004d app:id/nombretb}
+                    android.widget.TextView{2e6beac8 V.ED.... ... 230,381-490,430 #7f09004e app:id/numerotb}
+                  android.widget.RelativeLayout{42c1761 V.E..... ... 0,452-720,552 #7f09004f app:id/linearLayout}
+                    android.widget.TextView{2bebb286 V.ED.... ... 0,25-154,74 #7f090050 app:id/textView7}
+                    de.hdodenhof.circleimageview.CircleImageView{1d640747 V.ED.... ... 530,0-550,100 #7f090051 app:id/imageView2}
+                    android.widget.TextView{25b8eb74 V.ED.... ... 560,25-662,74 #7f090052 app:id/textView12}
+                  android.widget.RelativeLayout{3731c89d V.E..... ... 0,554-720,654 #7f090053 app:id/linearLayout2}
+                    android.widget.TextView{31c07112 V.ED.... ... 0,25-141,74 #7f090054 app:id/textView8}
+                    android.widget.TextView{174fd0e3 V.ED.... ... 636,25-656,74 #7f090055 app:id/textView6}
+                  android.widget.RelativeLayout{31334ae0 V.E..... ... 0,656-720,756 #7f090056 app:id/linearLayout3}
+                    android.widget.TextView{1ce75199 V.ED.... ... 0,25-209,74 #7f090057 app:id/textView9}
+                  android.widget.RelativeLayout{3eb08c5e V.E..... ... 0,758-720,858 #7f090058 app:id/linearLayout4}
+                    android.widget.TextView{2aa4983f V.ED.... ... 0,25-209,74 #7f090059 app:id/textView10}
+                  android.widget.RelativeLayout{e32350c V.E..... ... 0,860-720,960}
+                    android.widget.TextView{2ad26e55 V.ED.... ... 0,25-171,74 #7f09005a app:id/textView11}
+                  android.support.v7.widget.Toolbar{3f5106a V.E..... ... 0,0-720,112 #7f09004a app:id/mtb}
+                    android.widget.TextView{3654795b V.ED.... ... 32,29-126,83}
+                    android.support.v7.widget.ActionMenuView{165395f8 V.E..... ... 450,0-720,112}
+                      android.support.v7.internal.view.menu.ActionMenuItemView{2f189ad1 VFED..CL ... 0,8-270,104 #7f090066 app:id/cerrar}
+        android.view.View{1b4bc936 V.ED.... ... 0,0-720,50 #102002f android:id/statusBarBackground}
+        android.view.View{c575037 V.ED.... ... 0,1184-720,1280 #1020030 android:id/navigationBarBackground}
+
+  ACTIVITY com.jorwys.project.blablaphone/.login 1a2a6ffa pid=6242
+    Local FragmentActivity 2f772252 State:
+      mCreated=truemResumed=false mStopped=true mReallyStopped=true
+      mLoadersStarted=false
+    FragmentManager misc state:
+      mActivity=com.jorwys.project.blablaphone.login@2f772252
+      mContainer=android.support.v4.app.FragmentActivity$2@1d2819a4
+      mCurState=2 mStateSaved=true mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{1abb130d I.E..... ... 0,0-720,1280}
+        android.widget.LinearLayout{2a8342c2 V.E..... ... 0,0-720,1184}
+          android.view.ViewStub{3c46b8d3 G.E..... ... 0,0-0,0 #1020373}
+          android.widget.FrameLayout{3c9f2c10 V.E..... ... 0,50-720,1184}
+            android.support.v7.internal.widget.FitWindowsLinearLayout{3392d309 V.E..... ... 0,0-720,1134 #7f09002c app:id/action_bar_root}
+              android.support.v7.internal.widget.ViewStubCompat{33c6c90e G.E..... ... 0,0-0,0 #7f09002d app:id/action_mode_bar_stub}
+              android.support.v7.internal.widget.NativeActionModeAwareLayout{2bba0f2f V.E..... ... 0,0-720,1134 #1020002 android:id/content}
+                android.widget.RelativeLayout{3c32f93c V.E..... ... 0,0-720,1134}
+                  android.widget.EditText{2a0c96c5 VFED..CL ... 0,396-720,516 #7f090044 app:id/editText}
+                  android.widget.EditText{1eaa681a VFED..CL F.. 0,518-720,638 #7f090046 app:id/editText2}
+                  android.widget.Button{18626f4b VFED..C. ... 380,668-600,738 #7f090047 app:id/button}
+                  android.widget.TextView{3ed46d28 V.ED..C. ... 152,1065-567,1114 #7f090048 app:id/textView4}
+                  android.widget.Button{ea4da41 VFED..C. ... 120,668-340,738 #7f090049 app:id/button2}
+                  android.widget.TextView{5f6ebe6 V.ED.... ... 60,86-660,286 #7f090045 app:id/imageView}
+        android.view.View{1fe6b527 V.ED.... ... 0,0-720,50 #102002f android:id/statusBarBackground}
+        android.view.View{239733d4 V.ED.... ... 0,1184-720,1280 #1020030 android:id/navigationBarBackground}
