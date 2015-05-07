@@ -47,8 +47,7 @@ public class Perfil extends ActionBarActivity {
     private TextView nombretb,saldo,numerotb;
     private Toolbar tbperfil;
     private CircleImageView perfil;
-    private ProgressDialog pDialog;
-    private String email;
+    private String email; // se inician las variables
     private LinearLayout otrotb;
     private ImageView img;
     @Override
@@ -58,30 +57,27 @@ public class Perfil extends ActionBarActivity {
          setContentView(R.layout.activity_perfil);
         nombretb=(TextView)findViewById(R.id.nombretb);
         numerotb=(TextView)findViewById(R.id.numerotb);
-        tbperfil=(Toolbar)findViewById(R.id.mtb);
+        tbperfil=(Toolbar)findViewById(R.id.mtb); // se asigna el toolbar transparente
         saldo=(TextView)findViewById(R.id.textView6);
         perfil=(CircleImageView)findViewById(R.id.perfil);
         otrotb=(LinearLayout)findViewById(R.id.otrotb);
         img=(ImageView)findViewById(R.id.imageView3);
-        Bundle i=getIntent().getExtras();
-        String data=i.getString("data");
+        Bundle i=getIntent().getExtras(); // se obtienen los extras
+        String data=i.getString("data"); // se obtienen los datos que envio
         setSupportActionBar(tbperfil);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        otrotb.bringToFront();
-        tbperfil.bringToFront();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);// no se puede navegar atras
+        otrotb.bringToFront(); // se muestra el relative layout encima
+        tbperfil.bringToFront(); // se muestra el toolbar encima del relative layout
 
 
-
-
-
-        try {
+        try {// se intenta convertir el string en json array para usarlo y obtener los datos de manera individual
             ja= new JSONArray(data);
-            nombretb.setText(ja.getString(0)+" "+ja.getString(1));
-            numerotb.setText(ja.getString(4));
-            saldo.setText(ja.getString(5)+" $");
-            email=ja.getString(2);
+            nombretb.setText(ja.getString(0)+" "+ja.getString(1)); // se asigna nombre y apellido
+            numerotb.setText(ja.getString(4)); // numero
+            saldo.setText(ja.getString(5)+" $"); // saldo
+            email=ja.getString(2); // el correo para obtener la imagen del servidor
             new DownloadImageTask((ImageView) findViewById(R.id.perfil))
-                    .execute("https://blablaphone-myappsjordys.rhcloud.com/images/"+email+".jpg");
+                    .execute("https://blablaphone-myappsjordys.rhcloud.com/images/"+email+".jpg"); // se busca la imagen en el servidor mediante asynctask
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -93,35 +89,35 @@ perfil.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
         Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(i,1);
-
+ // circle imageview para obtener la imagen y como request tiene el valor 1
 
     }
 });
 
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) { // metodo para obtener resultado y numero de request
+ //si el request es 1 es la imagen y si resulto ok entra en el codigo
         if (requestCode == 1) {
             if(resultCode == RESULT_OK){
                 Uri selectedImage = data.getData();
-                String[] filePathColumn = { MediaStore.Images.Media.DATA };
+                String[] filePathColumn = { MediaStore.Images.Media.DATA }; // obtiene la direccion de la imagen
 
                 Cursor cursor = getContentResolver().query(selectedImage,
-                        filePathColumn, null, null, null);
+                        filePathColumn, null, null, null); // crea un cursor para obtenerla
                 cursor.moveToFirst();
 
-                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                int columnIndex = cursor.getColumnIndex(filePathColumn[0]); //
                 String picturePath = cursor.getString(columnIndex);
                 cursor.close();
                 Bitmap bm = BitmapFactory.decodeFile(picturePath);
-                perfil.setImageBitmap(bm);
-                img.setImageDrawable(perfil.getDrawable());
-                new imagensubir().execute(picturePath,email);
+                perfil.setImageBitmap(bm); // asigna el bitmap a la imagen
+                img.setImageDrawable(perfil.getDrawable()); // y el imageview detras de otrotb que es el linear layout se coloca la imagen como drawable pero otrotb tiene transparencia
+                new imagensubir().execute(picturePath,email); // se llama al asyntask para subir la imagen
 
 
             }
-            if (resultCode == RESULT_CANCELED) {
+            if (resultCode == RESULT_CANCELED) {// si se cancela la busca de imagenes no pasa nada
 
             }
         }
@@ -130,7 +126,7 @@ perfil.setOnClickListener(new View.OnClickListener() {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_perfil, menu);
+        getMenuInflater().inflate(R.menu.menu_perfil, menu); // se infla el menu
         return true;
     }
 
@@ -144,14 +140,14 @@ perfil.setOnClickListener(new View.OnClickListener() {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.cerrar) {
-            new AlertDialog.Builder(this)
+            new AlertDialog.Builder(this) // con el dialog builder se crea un dialogo en el metodo para cerrar sesion del menu
                     .setTitle("Cerrar Sesion")
                     .setMessage("Desea cerrar sesion?")
                     .setIcon(R.drawable.ic_exit_to_app_black_48dp)
                     .setPositiveButton("Salir", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            finish(); // se cierra el activity al cerrar sesion
                         }
                     }).setNegativeButton("Me quedare", new DialogInterface.OnClickListener() {
                 @Override
@@ -159,7 +155,7 @@ perfil.setOnClickListener(new View.OnClickListener() {
                     dialog.dismiss();
 
                 }
-            }).show();
+            }).show(); //
             return true;
         }
 
@@ -170,7 +166,7 @@ perfil.setOnClickListener(new View.OnClickListener() {
 
        @Override
        protected String doInBackground(String... params) {
-           Conex c=new Conex();
+           Conex c=new Conex(); // se llama la instancia conex para usar el metodo imagen que usa dos parametros la direccion y el nombre de la imagen
            String txt=c.imagen(params[0],params[1]);
            return txt;
        }
@@ -179,6 +175,8 @@ perfil.setOnClickListener(new View.OnClickListener() {
        protected void onPostExecute(String s) {
            super.onPostExecute(s);
            Toast.makeText(getBaseContext(),"La foto a sido subida exitosamente",Toast.LENGTH_SHORT).show();
+           //al terminar de enviar la direccion y el nombre de la imagen lanza el toast y trata de actualizar a la nueva imagen desde el server con
+           //el metodo downloadimagetask
            new DownloadImageTask((ImageView) findViewById(R.id.perfil))
                    .execute("https://blablaphone-myappsjordys.rhcloud.com/images/" + email + ".jpg");
        }
@@ -192,7 +190,7 @@ perfil.setOnClickListener(new View.OnClickListener() {
         }
 
         protected Bitmap doInBackground(String... urls) {
-            String urldisplay = urls[0];
+            String urldisplay = urls[0]; // desde la url trata de hacer un bitmap con el inputstream
             Bitmap mIcon11 = null;
             try {
                 InputStream in = new java.net.URL(urldisplay).openStream();
@@ -204,7 +202,7 @@ perfil.setOnClickListener(new View.OnClickListener() {
         }
 
         protected void onPostExecute(Bitmap result) {
-            bmImage.setImageBitmap(result);
+            bmImage.setImageBitmap(result); // asigna ambas vistas el bitmap obtenido desde la web en el servidor
             img.setImageDrawable(bmImage.getDrawable());
 
         }
